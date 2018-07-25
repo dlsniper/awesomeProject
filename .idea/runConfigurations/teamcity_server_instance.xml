@@ -1,0 +1,38 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="teamcity-server-instance" type="docker-deploy" factoryName="docker-image" singleton="true" server-name="Localhost - Windows">
+    <deployment type="docker-image">
+      <settings>
+        <option name="JSONFilePath" value="" />
+        <option name="command" value="" />
+        <option name="commandLineOptions" value="-itd" />
+        <option name="containerName" value="teamcity-server-instance" />
+        <option name="entrypoint" value="" />
+        <option name="imageTag" value="jetbrains/teamcity-server" />
+        <option name="portBindings">
+          <list>
+            <DockerPortBindingImpl>
+              <option name="containerPort" value="8111" />
+              <option name="hostPort" value="8111" />
+            </DockerPortBindingImpl>
+          </list>
+        </option>
+        <option name="startBrowserSettings">
+          <browser url="http://127.0.0.1" />
+        </option>
+        <option name="volumeBindings">
+          <list>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/data/teamcity_server/datadir" />
+              <option name="hostPath" value="d:\teamcity\server\data" />
+            </DockerVolumeBindingImpl>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/opt/teamcity/logs" />
+              <option name="hostPath" value="d:\teamcity\server\logs" />
+            </DockerVolumeBindingImpl>
+          </list>
+        </option>
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>

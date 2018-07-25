@@ -1,0 +1,5 @@
+// Start server
+docker run -itd --name teamcity-server-instance -v d:\teamcity\server\data:/data/teamcity_server/datadir -v d:\teamcity\server\logs:/opt/teamcity/logs -p 8111:8111 jetbrains/teamcity-server
+
+// Start agent
+docker run -itd -e SERVER_URL="http://10.0.75.1:8111"  -v  d:\teamcity\agent1\conf:/data/teamcity_agent/conf sometag:latest
